@@ -1,0 +1,40 @@
+<suite name="SmokeSuite" verbose ="1" parallel="tests" 
+    thread-count="5">
+  
+  
+  <tests>
+      
+     <test name="run on device 1">
+      
+      <classes>
+        <parameter name="port" value="4723"/>
+        <parameter name="device" value="ZY2225S4C4"></parameter>
+        
+        <class name="com.hedgehoglab.dines.tests.GuestUserToDines">
+          <methods>
+              <include name="testAcceptDeviceLocation"></include>
+          </methods>
+      </class>
+      </classes>
+     </test>
+  
+   <test name="run on device 2">
+       
+    <classes>
+        <parameter name="port" value="4725"/>
+        <parameter name="device" value="ZY2225S4C7"></parameter>
+        
+      <class name="ParallelExecSetup.ParallelSetup">
+          <methods>
+              <include name="startApplication"></include>
+          </methods>
+          </class>
+      </classes>
+  </test> <!-- Default test -->
+  
+  
+  
+  
+  </tests>
+</suite> <!-- Default suite -->
+            

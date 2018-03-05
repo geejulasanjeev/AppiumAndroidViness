@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" parallel="tests" thread-count="2" >
+	<test name="Test1">
+
+		<parameter name="deviceName" value="ZY2225S4C4"/>
+		
+		<parameter name="platformVersion" value="6.0.1"/>
+		<parameter name="URL" value="0.0.0.0:4723/wd/hub"/>
+		<classes>
+			     <class name="com.hedgehoglab.dines.tests.GuestUserToDines"/> 
+     <class name="com.hedgehoglab.dines.tests.RestaurnatServerLoginToDines"/>
+       <class name="com.hedgehoglab.dines.tests.CustomerLoginToDines"/>
+		</classes>
+	</test> 
+	
+	<test name="Test2">
+		<!-- <parameter name="port" value="4724"/>-->
+		<!-- <parameter name="deviceName" value="TA98600W39"/>-->
+		<!-- <parameter name="platformVersion" value="5.1"/>-->
+		 <parameter name="deviceName" value="TA98600W39"/>
+		
+		 <!--   <parameter name="UDID_" value="TA98600W39"/>-->
+		 <parameter name="platformVersion" value="5.1"/>
+		 <parameter name="URL" value="127.0.0.0:3456/wd/hub"/>
+		<classes>
+			     <class name="com.hedgehoglab.dines.tests.GuestUserToDines"/> 
+     <class name="com.hedgehoglab.dines.tests.RestaurnatServerLoginToDines"/>
+       <class name="com.hedgehoglab.dines.tests.CustomerLoginToDines"/>
+		</classes>
+	</test> 
+</suite> <!-- Suite -->

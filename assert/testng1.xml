@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> 
+
+ 
+<!--  <suite guice-stage="DEVELOPMENT" name="Default suite">-->
+
+ <!--   <test verbose="2" name="Default test">-->
+  <!--    <classes>-->
+    <!--    <class name="com.hedgehoglab.dines.tests.GuestUserToDines"/> -->
+      <!--  <class name="com.hedgehoglab.dines.tests.CustomerLoginToDines"/>-->
+    <!--   </classes>-->
+  <!--  </test> --><!-- Default test -->
+    
+<!--  </suite> --><!-- Default suite -->
+
+
+<suite name="SmokeSuite" verbose ="1" parallel="tests" thread-count="5">
+  
+  
+  <!--  <tests>-->
+      
+     <test name="run on device 1">
+      
+      <classes>
+
+       <class name="com.hedgehoglab.dines.tests.AppiumInstance"/> 
+      <class name="com.hedgehoglab.dines.tests.GuestUserToDines"/>
+        <parameter name="port" value="4723"/>
+        <parameter name="device" value="ZY2225S4C4"></parameter>
+          <!--  <methods>-->
+              <!--  <include name="testAcceptDeviceLocation"></include>-->
+          <!--  </methods>-->
+      
+      </classes>
+     </test>
+  
+   
+  
+  
+  
+  
+ <!--   </tests>-->
+</suite> <!-- Default suite -->
+            

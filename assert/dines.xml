@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" parallel="tests" thread-count="2" >
+	<test name="Test1">
+		<parameter name="port" value="4723"/>
+		<parameter name="device" value="ZY2225S4C4"/>
+		<!--  <parameter name="platformVersion_" value="Version_One"/>-->
+		<!--  <parameter name="URL_" value="127.0.0.1:1234/wd/hub"/>-->
+		<classes>
+			<class name="com.hedgehoglab.dines.tests.AppiumInstance"/>
+			<class name="com.hedgehoglab.dines.tests.GuestUserToDines"/>
+		</classes>
+	</test> <!--  Test 1 -->
+	<test name="Test2">
+		<parameter name="port" value="4724"/>
+		<parameter name="device" value="ZY2225S4C43"/>
+		<!--  <parameter name="platformVersion_" value="Version_Two"/>-->
+		<!--  <parameter name="URL_" value="127.0.0.2:3456/wd/hub"/>-->
+		<classes>
+			<class name="com.hedgehoglab.dines.tests.GuestUserToDines"/>
+		</classes>
+	</test> <!--  Test 2 -->
+</suite> <!-- Suite -->

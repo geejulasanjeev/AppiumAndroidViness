@@ -1,0 +1,4 @@
+customer = sanjeeva.geejula+user09@hedgehoglab.com
+password = Passw0rd
+server = adam.oxley+res@hedgehoglab.com
+spassword = Password
